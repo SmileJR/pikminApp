@@ -1,5 +1,5 @@
 {
-  "name": "Project3",
+  "name": "pokemonApp",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -11,15 +11,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/SmileJR/Project3.git"
+    "url": "git+https://github.com/SmileJR/pokemonApp.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/SmileJR/Project3/issues"
+    "url": "https://github.com/SmileJR/pokemonApp/issues"
   },
-  "homepage": "https://github.com/SmileJR/Project3#readme",
+  "homepage": "https://github.com/SmileJR/pokemonApp#readme",
   "dependencies": {
     "concurrently": "^4.0.1",
     "dotenv": "^6.1.0",
