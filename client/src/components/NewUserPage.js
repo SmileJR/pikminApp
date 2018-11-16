@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 
 
 
-class componentName extends Component {
+class NewUser extends Component {
     render() {
         return (
             <div><h1>SIGN UP FOR A PIKMIN ACCOUNT TODAY!!!</h1>
@@ -21,4 +21,4 @@ class componentName extends Component {
                                         }
                                     }
                                     
-export default componentName;
+export default NewUser;

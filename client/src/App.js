@@ -7,6 +7,8 @@ import Login from '../src/components/LoginPage'
 import User from '../src/components/UserPage'
 import NewUser from '../src/components/NewUserPage'
 import IndivPik from '../src/components/IndivPik'
+import HomePage from '../src/components/HomePage'
+
 
 
 
@@ -18,11 +20,12 @@ class App extends Component {
       <Router>
 <Switch>
       {/* //these are the paths on the url in the addressbar and they dictate what the user will see */}
+      
+      <Route exact path='/homepage' component={HomePage} />
       <Route exact path='/login' component={Login} /> 
       <Route exact path='/user' component={User} />
       <Route exact path='/newUser' component={NewUser} />
       <Route exact path='/indivPik' component={IndivPik} />
-      <Route exact path='/editUser' component={IndivPik} />
     
       </Switch>
       </Router>

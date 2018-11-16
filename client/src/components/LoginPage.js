@@ -1,24 +1,18 @@
 import React, { Component } from 'react';
-// import styled from 'styled-components'
+import { Redirect } from 'react-router-dom'
+import axios from 'axios'
 
-
-
-class componentName extends Component {
+class LogIn extends Component {
+    state = {
+        users: []
+      }
     render() {
         return (
             <div>
-                <form >
-                    First name:
-                        <input type="text" name="firstname" value="Mickey"></input>
-                          
-                                Last name:
-                                    <input type="text" name="lastname" value="Mouse"></input>
-                                        
-                                            <input type="submit" value="Submit"></input>
-</form>      
+                <h1>THIS IS THE LOGIN PAGE</h1>
             </div>
-                                            );
-                                        }
-                                    }
-                                    
-export default componentName;
+        );
+    }
+}
+
+export default LogIn;

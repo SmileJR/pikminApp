@@ -2,7 +2,7 @@ const express = require('express')
 const mongoose = require('mongoose')
 const logger = require('morgan')
 const app = express()
-// const routes = require('./routes/index')
+const routes = require('./routes/index') //connecting the routes
 
 
 app.use(logger('dev'))
@@ -13,7 +13,7 @@ app.use(express.json())
 
 
 
-// app.use('/', routes)
+app.use('/', routes)
 
 app.use(express.static(`${__dirname}/client/build`))
 

@@ -1,12 +1,12 @@
 const express = require('express')
 const router = express.Router()
 const userController = require('../controllers/userController')
-const pokemonController = require('../controllers/pokemonController')
+const pikminController = require('../controllers/pokemonController')
 // requiring cotrollers
 
 
-// Routes for Model 1
-// router.get()
+// Routes for User
+router.get('/api/users', userController.index)
 // router.post()
 // router.get()
 // router.patch()
@@ -14,7 +14,7 @@ const pokemonController = require('../controllers/pokemonController')
 
 
 
-// Routes for Model 2
+// Routes for Pikmin
 // router.get()
 // router.post()
 // router.get()
