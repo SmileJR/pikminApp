@@ -1,4 +1,3 @@
-
 import React, { Component } from 'react';
 import {BrowserRouter as Router, Switch, Route} from 'react-router-dom' 
 // what estblishes route in url
@@ -21,7 +20,7 @@ class App extends Component {
 <Switch>
       {/* //these are the paths on the url in the addressbar and they dictate what the user will see */}
       
-      <Route exact path='/homepage' component={HomePage} />
+      <Route exact path='/' component={HomePage} />
       <Route exact path='/login' component={Login} /> 
       <Route exact path='/user' component={User} />
       <Route exact path='/signup' component={SignUp} />

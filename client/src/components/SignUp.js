@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import axios from "axios";
 import { Link } from 'react-router-dom'
+import NavBar from './NavBar'
 
 // TODO: SHOW ALL USERS
 // TODO: CREATE FORM TO CREATE USER
@@ -49,6 +50,7 @@ class SignUp extends Component {
     return (
       <div>
         
+      <NavBar />
         {this.state.users.map((user) => (
           <div key={user._id}>
             <Link to={`/api/users/${user._id}`}>{user.username}</Link>
