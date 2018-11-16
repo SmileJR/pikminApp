@@ -3,7 +3,7 @@ import {BrowserRouter as Router, Switch, Route} from 'react-router-dom'
 // what estblishes route in url
 import Login from '../src/components/LoginPage'
 //import styled from 'styled-components'
-import User from '../src/components/UserPage'
+import UserPage from '../src/components/UserPage'
 import IndivPik from '../src/components/IndivPik'
 import HomePage from '../src/components/HomePage'
 
@@ -22,7 +22,7 @@ class App extends Component {
       
       <Route exact path='/' component={HomePage} />
       <Route exact path='/login' component={Login} /> 
-      <Route exact path='/user' component={User} />
+      <Route exact path='/users/:id' component={UserPage} />
       <Route exact path='/signup' component={SignUp} />
       <Route exact path='/indivpik' component={IndivPik} />
     

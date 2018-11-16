@@ -53,7 +53,7 @@ class SignUp extends Component {
       <NavBar />
         {this.state.users.map((user) => (
           <div key={user._id}>
-            <Link to={`/api/users/${user._id}`}>{user.username}</Link>
+            <Link to={`/users/${user._id}`}>{user.username}</Link>
           </div>
         ))}
 
