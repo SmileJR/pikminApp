@@ -22,7 +22,7 @@ class App extends Component {
       <Route exact path='/user' component={User} />
       <Route exact path='/newUser' component={NewUser} />
       <Route exact path='/indivPik' component={IndivPik} />
-      
+      <Route exact path='/editUser' component={IndivPik} />
     
       </Switch>
       </Router>
