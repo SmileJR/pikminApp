@@ -21,13 +21,13 @@ router.get('/api/users/:userId/pikmins', pikminsController.index)
 router.get('/api/pikmins/:pikminId', pikminsController.show)
 // show an individual pikmin
 
-// router.post()
+router.post('/api/users/:userId/pikmins', pikminsController.create)
 // create a new pikmin
+
+router.delete('/api/pikmins/:pikminId', pikminsController.delete)
+// delete a pikmin from the inventory
 
 // router.patch()
 // update an exisiting pikmin
-
-// router.delete()
-// delete a pikmin from the inventory
 
 module.exports = router
