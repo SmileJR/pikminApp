@@ -1,14 +1,14 @@
 import React, { Component } from 'react';
 // import styled from 'styled-components'
 
-class componentName extends Component {
+class IndivPik extends Component {
     render() {
         return (
             <div>
-                <h1>Youre At the user Paeg</h1>
+            <h1>This is an individual Pikmin's page</h1>
+            <h2>Wowweee!</h2>    
             </div>
         );
     }
 }
-
-export default componentName;
+export default IndivPik;

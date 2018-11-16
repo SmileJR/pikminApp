@@ -6,6 +6,8 @@ import Login from '../src/components/LoginPage'
 //import styled from 'styled-components'
 import User from '../src/components/UserPage'
 import NewUser from '../src/components/NewUserPage'
+import IndivPik from '../src/components/IndivPik'
+
 
 
 
@@ -19,6 +21,8 @@ class App extends Component {
       <Route exact path='/login' component={Login} /> 
       <Route exact path='/user' component={User} />
       <Route exact path='/newUser' component={NewUser} />
+      <Route exact path='/indivPik' component={IndivPik} />
+      
     
       </Switch>
       </Router>
