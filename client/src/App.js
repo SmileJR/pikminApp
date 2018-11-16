@@ -5,10 +5,10 @@ import {BrowserRouter as Router, Switch, Route} from 'react-router-dom'
 import Login from '../src/components/LoginPage'
 //import styled from 'styled-components'
 import User from '../src/components/UserPage'
-import NewUser from '../src/components/NewUserPage'
 import IndivPik from '../src/components/IndivPik'
 import HomePage from '../src/components/HomePage'
 
+import SignUp from '../src/components/SignUp'
 
 
 
@@ -24,8 +24,8 @@ class App extends Component {
       <Route exact path='/homepage' component={HomePage} />
       <Route exact path='/login' component={Login} /> 
       <Route exact path='/user' component={User} />
-      <Route exact path='/newUser' component={NewUser} />
-      <Route exact path='/indivPik' component={IndivPik} />
+      <Route exact path='/signup' component={SignUp} />
+      <Route exact path='/indivpik' component={IndivPik} />
     
       </Switch>
       </Router>
