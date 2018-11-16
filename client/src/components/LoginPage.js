@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import { Redirect } from 'react-router-dom'
-import axios from 'axios'
+// import { Redirect } from 'react-router-dom'
+// import axios from 'axios'
 
 class LogIn extends Component {
     state = {

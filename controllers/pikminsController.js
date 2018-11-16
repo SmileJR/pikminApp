@@ -1,7 +1,7 @@
 const User = require('../models/User')
-const Pikmin = require('../models/Pikimin')
+const Pikmin = require('../models/Pikmin')
 
-const pikminController = {
+const pikminsController = {
     index: (req, res) => {
         let userId = req.params.userId
         User.findById(userId).populate('pikmins')
@@ -18,4 +18,4 @@ const pikminController = {
     }
 }
 
-module.exports = pikminController
+module.exports = pikminsController
