@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import axios from 'axios'
 import styled from 'styled-components'
+import NavBar from './NavBar'
 
 // Need info about a user
 // Need info about that users pikmins
@@ -126,6 +127,7 @@ class UserPage extends Component {
   render() {
     return (
       <div>
+        <NavBar />
         <h1>Welcome {this.state.user.username}</h1>
         <NewPikminButton onClick={this.handleCreateNewPikmin}>
           New Pikmin

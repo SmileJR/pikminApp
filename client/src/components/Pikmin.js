@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 // import styled from 'styled-components'
 
-class IndivPik extends Component {
+class Pikmin extends Component {
     render() {
         return (
             <div>
@@ -11,4 +11,4 @@ class IndivPik extends Component {
         );
     }
 }
-export default IndivPik;
+export default Pikmin;
