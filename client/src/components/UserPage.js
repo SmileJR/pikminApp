@@ -54,6 +54,8 @@ class UserPage extends Component {
     pikmins: []
   }
 
+  
+
   componentDidMount() {
     // make an api call to get one single user
     // On the server URL is '/api/users/:userId'
