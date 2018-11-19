@@ -21,17 +21,17 @@ const PikminsContainerStyle = styled.div`
 `
 
 class UserPage extends Component {
-//should i use this one?
+  //should i use this one?
   state = {
     user: {},
     pikmins: []
   }
-//or this one?  
+  //or this one?  
   // state = {
   //   user: {
   //     pikmins: []
   //   }
-    
+
   // }
 
 
@@ -56,8 +56,11 @@ class UserPage extends Component {
   handleCreateNewPikmin = () => {
     const userId = this.props.match.params.userId
     const payload = {
-      pikminName: 'Pikmins Name',
-      type: 'Water/Fire/Electricity'
+      imageUrl: 'picture',
+      pikminName: 'pikmin name',
+      type: 'pik type',
+      level: 'pik level',
+      weakness: 'pik weakness'
     }
     axios.post(`/api/users/${userId}/pikmins`, payload).then(res => {
       const newPikmin = res.data
@@ -65,20 +68,20 @@ class UserPage extends Component {
       this.setState({ pikmins: newStatePikmins })
     })
   }
- onDelete() {
-        let userId = this.state.user._id;
-        axios.delete(`http://localhost:3000/api/users/${userId}`)
-            .then(response => {
-            this.props.history.push('/')
-        })
-    }
+  onDelete() {
+    let userId = this.state.user._id;
+    axios.delete(`http://localhost:3000/api/users/${userId}`)
+      .then(response => {
+        this.props.history.push('/')
+      })
+  }
   render() {
     console.log('pikmins', this.state.pikmins)
     return (
       <div>
-        <NavBar/>
+        <NavBar />
 
- <button onClick={this.onDelete.bind(this)}>Delete</button>
+        <button onClick={this.onDelete.bind(this)}>Delete</button>
 
 
 
@@ -90,7 +93,7 @@ class UserPage extends Component {
         </NewPikminButton>
         <PikminsContainerStyle>
           {this.state.pikmins.map(pikmin => (
-            <Pikmin getAllPikmins={this.getAllPikmins} key={pikmin._id} pikmin={pikmin}/>
+            <Pikmin getAllPikmins={this.getAllPikmins} key={pikmin._id} pikmin={pikmin} />
           ))}
         </PikminsContainerStyle>
       </div>

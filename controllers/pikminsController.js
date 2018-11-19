@@ -19,8 +19,8 @@ const pikminsController = {
         // show will pull up one specific pikmin
     },
     create: (req, res) => {
-        let pikminId = req.params.pikminId
-        User.findById(pikminId)
+        let userId = req.params.userId
+        User.findById(userId)
         .then((user) => {
             console.log(user)
             Pikmin.create(req.body)

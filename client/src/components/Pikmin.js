@@ -83,7 +83,6 @@ class Pikmin extends Component {
           <CardSubtitle>{this.state.type}</CardSubtitle>
           <CardSubtitle>{this.state.level}</CardSubtitle>
           <CardText>{this.state.weakness}</CardText>
-          <Button>Button</Button>
         </CardBody>
       </Card>
     
@@ -98,7 +97,7 @@ class Pikmin extends Component {
           onChange={this.handleChange}
           name="description" value={this.state.description}
         />
-        <button onClick={this.handleDelete}>X</button>
+        <Button color="warning" onClick={this.handleDelete}>X</Button>
       </PikminStyles>
       </div>
     )
