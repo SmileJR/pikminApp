@@ -73,7 +73,7 @@ class Pikmin extends Component {
 
   render() {
     return (
-      div>
+      <div>
       <Card>
         <CardImg top width="100%" src="https://placeholdit.imgix.net/~text?txtsize=33&txt=318%C3%97180&w=318&h=180" alt="Card image cap" />
         <CardBody>
@@ -84,7 +84,7 @@ class Pikmin extends Component {
         </CardBody>
       </Card>
     
-      {/* <PikminStyles> */}
+
         <input onBlur={this.handleUpdate}
           onChange={this.handleChange}
           type="text" name="title"
@@ -95,7 +95,6 @@ class Pikmin extends Component {
           name="description" value={this.state.description}
         />
         <button onClick={this.handleDelete}>X</button>
-      {/* </PikminStyles> */}
       </div>
     )
   }
