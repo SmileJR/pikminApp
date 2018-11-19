@@ -9,7 +9,7 @@ import NavBar from './NavBar'
 const NewPikminButton = styled.button`
 background-image: linear-gradient(-90deg, red, yellow);
   color: white;
-  font-size: 1.3rem;
+  font-size: 2.3rem;
   padding: 7.5px 5px;
 `
 
@@ -22,17 +22,17 @@ const PikminsContainerStyle = styled.div`
 
 class UserPage extends Component {
 //should i use this one?
-  // state = {
-  //   user: {},
-  //   pikmins: []
-  // }
-//or this one?  
   state = {
-    user: {
-      pikmins: []
-    }
-    
+    user: {},
+    pikmins: []
   }
+//or this one?  
+  // state = {
+  //   user: {
+  //     pikmins: []
+  //   }
+    
+  // }
 
 
   componentDidMount() {
@@ -73,6 +73,7 @@ class UserPage extends Component {
         })
     }
   render() {
+    console.log('pikmins', this.state.pikmins)
     return (
       <div>
         <NavBar/>
@@ -83,13 +84,13 @@ class UserPage extends Component {
 
 
 
-        <h1>{this.state.user.username}'s Pikmin Page</h1>
+        <h1>Welcome {this.state.user.username}! This is your Pikmin Page</h1>
         <NewPikminButton onClick={this.handleCreateNewPikmin}>
           New Pikmin
         </NewPikminButton>
         <PikminsContainerStyle>
           {this.state.pikmins.map(pikmin => (
-            <Pikmin getAllPikmins={this.getAllPikmins} key={pikmin._id} idea={pikmin}/>
+            <Pikmin getAllPikmins={this.getAllPikmins} key={pikmin._id} pikmin={pikmin}/>
           ))}
         </PikminsContainerStyle>
       </div>
