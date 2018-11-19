@@ -5,34 +5,34 @@ import { Card, CardImg, CardText, CardBody,
   CardTitle, CardSubtitle, Button } from 'reactstrap';
 
 
-// const PikminStyles = styled.div`
-//   display: flex;
-//   position: relative;
-//   flex-direction: column;
-//   width: 200px;
-//   height: 200px;
-//   background: #f1faee;
-//   margin: 10px 0;
-//   button {
-//     position: absolute;
-//     top: 5px;
-//     right: 10px;
-//   }
+const PikminStyles = styled.div`
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  width: 200px;
+  height: 200px;
+  background: #f1faee;
+  margin: 10px 0;
+  button {
+    position: absolute;
+    top: 5px;
+    right: 10px;
+  }
 
-//   input,
-//   textarea {
-//     background-color: transparent;
-//     border: none;
-//   }
+  input,
+  textarea {
+    background-color: transparent;
+    border: none;
+  }
 
-//   input {
-//     height: 30%;
-//     font-size: 1.3rem;
-//   }
-//   textarea {
-//     height: 70%;
-//   }
-// `
+  input {
+    height: 30%;
+    font-size: 1.3rem;
+  }
+  textarea {
+    height: 70%;
+  }
+`
 
 class Pikmin extends Component {
   state = {
@@ -40,14 +40,16 @@ class Pikmin extends Component {
     pikminName: '',
     type: '',
     level: '',
-    weakness: '',
+    weakness: ''
   }
 
   componentDidMount(){
     const initialState = {
-      _id: this.props.pikmin._id,
-      title: this.props.pikmin.title,
-      description: this.props.pikmin.description
+      imageUrl: this.props.pikmin.imageUrl,
+      pikminName: this.props.pikmin.pikminName,
+      type: this.props.pikmin.type,
+      level: this.props.pikmin.level,
+      weakness: this.props.pikmin.weakness
     }
 
     this.setState(initialState)
@@ -75,15 +77,16 @@ class Pikmin extends Component {
     return (
       <div>
       <Card>
-        <CardImg top width="100%" src="https://placeholdit.imgix.net/~text?txtsize=33&txt=318%C3%97180&w=318&h=180" alt="Card image cap" />
+        <CardImg top width="100%" src={this.state.imageUrl} alt="Card image cap" />
         <CardBody>
-          <CardTitle>Card title</CardTitle>
-          <CardSubtitle>Card subtitle</CardSubtitle>
-          <CardText>Some quick example text to build on the card title and make up the bulk of the card's content.</CardText>
+          <CardTitle>{this.state.type}</CardTitle>
+          <CardSubtitle>{this.state.pikminName}</CardSubtitle>
+          <CardText>{this.state.weakness}</CardText>
           <Button>Button</Button>
         </CardBody>
       </Card>
     
+      <PikminStyles>
 
         <input onBlur={this.handleUpdate}
           onChange={this.handleChange}
@@ -95,6 +98,7 @@ class Pikmin extends Component {
           name="description" value={this.state.description}
         />
         <button onClick={this.handleDelete}>X</button>
+      </PikminStyles>
       </div>
     )
   }
