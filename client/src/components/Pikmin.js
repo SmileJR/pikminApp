@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import styled from 'styled-components'
 import axios from 'axios'
 import { Card, CardImg, CardText, CardBody,
-  CardTitle, CardSubtitle, Button } from 'reactstrap';
+  CardTitle, CardSubtitle} from 'reactstrap';
 
 
 const PikminStyles = styled.div`
@@ -36,6 +36,7 @@ const PikminStyles = styled.div`
 
 class Pikmin extends Component {
   state = {
+    pikminId: '',
     imageUrl: '',
     pikminName: '',
     type: '',
@@ -45,6 +46,7 @@ class Pikmin extends Component {
 
   componentDidMount(){
     const initialState = {
+      pikminId: this.props.pikmin._id,
       imageUrl: this.props.pikmin.imageUrl,
       pikminName: this.props.pikmin.pikminName,
       type: this.props.pikmin.type,
@@ -62,7 +64,7 @@ class Pikmin extends Component {
 
 
   handleDelete = () => {
-    axios.delete(`/api/pikmins/${this.state._id}`).then(() => {
+    axios.delete(`/api/pikmins/${this.state.pikminId}`).then(() => {
       this.props.getAllPikmins()
     })
   }
@@ -87,17 +89,9 @@ class Pikmin extends Component {
       </Card>
     
       <PikminStyles>
-
-        <input onBlur={this.handleUpdate}
-          onChange={this.handleChange}
-          type="text" name="title"
-          value={this.state.pikminName}
-        />
-        <textarea onBlur={this.handleUpdate}
-          onChange={this.handleChange}
-          name="description" value={this.state.description}
-        />
-        <Button color="warning" onClick={this.handleDelete}>X</Button>
+        
+        <button onClick={this.handleDelete}>Delete this Pikmin</button>
+        
       </PikminStyles>
       </div>
     )
