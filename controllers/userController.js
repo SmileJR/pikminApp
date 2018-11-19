@@ -1,5 +1,5 @@
 const User = require('../models/User')
-// const Pikmin = require('../models/Pikmin')
+ const Pikmin = require('../models/Pikmin')
 
 const userController = {
     index: (req, res) => {
