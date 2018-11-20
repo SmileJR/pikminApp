@@ -30,7 +30,7 @@ class NewPikmin extends Component {
   handleSubmit = event => {
     event.preventDefault();
     console.log(this.props.match.params.userId)
-    // make post request to our api to create new user
+    // make post request to our api to create new pikmin
 
     axios.post(`/api/users/${this.props.match.params.userId}/pikmins`, this.state.newPikmin)
     //post this new pikmin to this specific user

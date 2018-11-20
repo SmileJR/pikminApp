@@ -31,7 +31,7 @@ class EditUser extends Component {
         // make post request to our api to create new user
         axios.patch(`/api/users/${userId}`, this.state.newUser)
           .then(res => {
-            this.props.history.push(`/profiles`)
+            this.props.history.push(`/Homepage`)
           })
           .catch(err => {
             console.log(err);
