@@ -46,6 +46,7 @@ class Pikmin extends Component {
 
   componentDidMount(){
     const initialState = {
+      //if i dont do this part the app wont know what to put in the state 
       pikminId: this.props.pikmin._id,
       imageUrl: this.props.pikmin.imageUrl,
       pikminName: this.props.pikmin.pikminName,

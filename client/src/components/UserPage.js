@@ -4,6 +4,7 @@ import styled from 'styled-components'
 import Pikmin from './Pikmin'
 import NavBar from './NavBar'
 import { Link } from 'react-router-dom'
+
 // Need info about a user
 // Need info about that users ideas
 
@@ -81,8 +82,8 @@ class UserPage extends Component {
     return (
       <div>
         <NavBar />
-
-        <button onClick={this.onDelete.bind(this)}>Delete</button>
+        <button><Link to={`/users/${this.props.match.params.id}/edit`}>Edit Account</Link></button>
+        <button onClick={this.onDelete.bind(this)}>Delete Account</button>
 
 
 

@@ -7,6 +7,7 @@ import UserPage from '../src/components/UserPage'
 import Pikmin from '../src/components/Pikmin'
 import HomePage from '../src/components/HomePage'
 import SignUp from '../src/components/SignUp'
+import EditUser from '../src/components/EditUser';
 
 
 
@@ -22,6 +23,7 @@ class App extends Component {
       <Route exact path='/' component={HomePage} />
       <Route exact path='/users/:userId/newpikmin' component={NewPikmin} /> 
       <Route exact path='/users/:id' component={UserPage} />
+      <Route exact path="/users/:userId/edit" component={EditUser} />
       <Route exact path='/signup' component={SignUp} />
       <Route exact path='/users/:userId/pikmin' component={Pikmin} />
     

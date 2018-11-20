@@ -3,6 +3,7 @@ import React, { Component } from 'react';
 import axios from 'axios'
 import { Link } from 'react-router-dom'
 import NavBar from './NavBar'
+import { Button } from 'reactstrap';
 
 class NewPikmin extends Component {
   state = {
@@ -123,6 +124,7 @@ class NewPikmin extends Component {
 
           <button type="submit">Create New Pikmin</button>
         </form>
+        <Button color="primary">primary</Button>{' '}
       </div>
     );
   }
