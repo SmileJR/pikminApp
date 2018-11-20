@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import {BrowserRouter as Router, Switch, Route} from 'react-router-dom' 
 // what estblishes route in url
-import Login from '../src/components/LoginPage'
+import NewPikmin from '../src/components/NewPikmin'
 //import styled from 'styled-components'
 import UserPage from '../src/components/UserPage'
 import Pikmin from '../src/components/Pikmin'
@@ -20,7 +20,7 @@ class App extends Component {
       {/* //these are the paths on the url in the addressbar and they dictate what the user will see */}
       
       <Route exact path='/' component={HomePage} />
-      <Route exact path='/login' component={Login} /> 
+      <Route exact path='/newpikmin' component={NewPikmin} /> 
       <Route exact path='/users/:id' component={UserPage} />
       <Route exact path='/signup' component={SignUp} />
       <Route exact path='/pikmin' component={Pikmin} />

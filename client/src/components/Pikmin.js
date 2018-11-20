@@ -81,10 +81,10 @@ class Pikmin extends Component {
       <Card>
         <CardImg top width="100%" src={this.state.imageUrl} alt="Card image cap" />
         <CardBody>
-          <CardTitle>{this.state.pikminName}</CardTitle>
-          <CardSubtitle>{this.state.type}</CardSubtitle>
-          <CardSubtitle>{this.state.level}</CardSubtitle>
-          <CardText>{this.state.weakness}</CardText>
+          <CardTitle>Pikmin Name: {this.state.pikminName}</CardTitle>
+          <CardSubtitle>Type: {this.state.type}</CardSubtitle>
+          <CardSubtitle>Level: {this.state.level}</CardSubtitle>
+          <CardText>Weakness: {this.state.weakness}</CardText>
         </CardBody>
       </Card>
     
