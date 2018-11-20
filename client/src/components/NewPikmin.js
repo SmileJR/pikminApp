@@ -8,29 +8,33 @@ class NewPikmin extends Component {
   state = {
     pikmins: [],
     newPikmin: {
-    pikminId: '',
-    imageUrl: '',
-    pikminName: '',
-    type: '',
-    level: '',
-    weakness: ''
+      pikminId: '',
+      imageUrl: '',
+      pikminName: '',
+      type: '',
+      level: '',
+      weakness: ''
     }
   };
 
   handleChange = event => {
-    console.log("name", event.target.name);
     console.log("value", event.target.value);
     const updatedNewPikmin = { ...this.state.newPikmin };
     // event target name wil be either 'username or password'
-    updatedNewPikmin[event.target.pikminName] = event.target.value;
+    console.log(updatedNewPikmin)
+    updatedNewPikmin[event.target.name] = event.target.value;
     this.setState({ newPikmin: updatedNewPikmin });
   };
+
   handleSubmit = event => {
     event.preventDefault();
+    console.log(this.props.match.params.userId)
     // make post request to our api to create new user
-    axios.post("/api/pikmins", this.state.newUser)
+
+    axios.post(`/api/users/${this.props.match.params.userId}/pikmins`, this.state.newPikmin)
+    //post this new pikmin to this specific user
       .then(res => {
-        this.props.history.push(`/pikmins/${res.data._id}`)
+        this.props.history.push(`/users/${this.props.match.params.userId}`)
       })
       .catch(err => {
         console.log(err);
@@ -60,7 +64,6 @@ class NewPikmin extends Component {
         ))}
 
         <h3>Create A New Pikmin! </h3>
-
         <form onSubmit={this.handleSubmit}>
           <div>
             <label htmlFor="imageUrl">imageUrl: </label>

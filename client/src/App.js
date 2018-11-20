@@ -20,10 +20,10 @@ class App extends Component {
       {/* //these are the paths on the url in the addressbar and they dictate what the user will see */}
       
       <Route exact path='/' component={HomePage} />
-      <Route exact path='/newpikmin' component={NewPikmin} /> 
+      <Route exact path='/users/:userId/newpikmin' component={NewPikmin} /> 
       <Route exact path='/users/:id' component={UserPage} />
       <Route exact path='/signup' component={SignUp} />
-      <Route exact path='/pikmin' component={Pikmin} />
+      <Route exact path='/users/:userId/pikmin' component={Pikmin} />
     
       </Switch>
       </Router>

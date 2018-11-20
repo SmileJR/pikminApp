@@ -90,7 +90,7 @@ class UserPage extends Component {
 
         <h1>Welcome {this.state.user.username}! This is your Pikmin Page</h1>
         <NewPikminButton onClick={this.handleCreateNewPikmin}>
-         <Link to="/newPikmin"> New Pikmin</Link>
+         <Link to={`/users/${this.props.match.params.id}/newPikmin`}> New Pikmin</Link>
         </NewPikminButton>
         <PikminsContainerStyle>
           {this.state.pikmins.map(pikmin => (
