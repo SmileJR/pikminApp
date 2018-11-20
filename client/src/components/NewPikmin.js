@@ -6,28 +6,31 @@ import NavBar from './NavBar'
 
 class NewPikmin extends Component {
   state = {
+    pikmins: [],
+    newPikmin: {
     pikminId: '',
     imageUrl: '',
     pikminName: '',
     type: '',
     level: '',
     weakness: ''
+    }
   };
 
   handleChange = event => {
     console.log("name", event.target.name);
     console.log("value", event.target.value);
-    const updatedNewUser = { ...this.state.newUser };
+    const updatedNewPikmin = { ...this.state.newPikmin };
     // event target name wil be either 'username or password'
-    updatedNewUser[event.target.name] = event.target.value;
-    this.setState({ newUser: updatedNewUser });
+    updatedNewPikmin[event.target.pikminName] = event.target.value;
+    this.setState({ newPikmin: updatedNewPikmin });
   };
   handleSubmit = event => {
     event.preventDefault();
     // make post request to our api to create new user
-    axios.post("/api/users", this.state.newUser)
+    axios.post("/api/pikmins", this.state.newUser)
       .then(res => {
-        this.props.history.push(`/users/${res.data._id}`)
+        this.props.history.push(`/pikmins/${res.data._id}`)
       })
       .catch(err => {
         console.log(err);
@@ -35,14 +38,14 @@ class NewPikmin extends Component {
     // when we get that data back, we need to navigate to the new users page
   };
 
-  getAllUsers = () => {
-    axios.get("/api/users").then(res => {
+  getAllPikmins = () => {
+    axios.get("/api/pikmins").then(res => {
       this.setState({ users: res.data });
     });
   };
 
   componentDidMount() {
-    this.getAllUsers();
+    this.getAllPikmins();
   }
 
   render() {
@@ -50,9 +53,9 @@ class NewPikmin extends Component {
       <div>
 
         <NavBar />
-        {this.state.users.map((user) => (
-          <div key={user._id}>
-            <Link to={`/users/${user._id}`}>{user.username}</Link>
+        {this.state.pikmins.map((pikmin) => (
+          <div key={pikmin._id}>
+            <Link to={`/pikmins/${pikmin._id}`}>{pikmin.pikminName}</Link>
           </div>
         ))}
 

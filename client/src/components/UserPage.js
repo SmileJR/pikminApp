@@ -3,6 +3,7 @@ import axios from 'axios'
 import styled from 'styled-components'
 import Pikmin from './Pikmin'
 import NavBar from './NavBar'
+import { Link } from 'react-router-dom'
 // Need info about a user
 // Need info about that users ideas
 
@@ -89,7 +90,7 @@ class UserPage extends Component {
 
         <h1>Welcome {this.state.user.username}! This is your Pikmin Page</h1>
         <NewPikminButton onClick={this.handleCreateNewPikmin}>
-          New Pikmin
+         <Link to="/newPikmin"> New Pikmin</Link>
         </NewPikminButton>
         <PikminsContainerStyle>
           {this.state.pikmins.map(pikmin => (
