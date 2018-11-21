@@ -4,6 +4,14 @@ import axios from 'axios'
 import { Link } from 'react-router-dom'
 import NavBar from './NavBar'
 import { Button } from 'reactstrap';
+import styled from 'styled-components'
+
+const BackgroundColor = styled.div`
+background-color: #0A1B0E;
+height: 900px;
+color: #DBD5C0;    
+
+`
 
 class NewPikmin extends Component {
   state = {
@@ -55,6 +63,7 @@ class NewPikmin extends Component {
 
   render() {
     return (
+      <BackgroundColor>
       <div>
 
         <NavBar />
@@ -127,6 +136,7 @@ class NewPikmin extends Component {
         
         </form>
         </div>
+        </BackgroundColor>
     );
   }
 }

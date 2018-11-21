@@ -9,10 +9,30 @@ import { Link } from 'react-router-dom'
 // Need info about that users ideas
 
 const NewPikminButton = styled.button`
-background-image: linear-gradient(-90deg, red, yellow);
+background-image: linear-gradient(-90deg, #0D8E47, #072C13);
   color: white;
   font-size: 2.3rem;
   padding: 7.5px 5px;
+`
+
+const EditUserButton = styled.button`
+background-image: linear-gradient(-90deg, #0D8E47, #072C13);
+  color: white;
+  font-size: 2.3rem;
+  padding: 7.5px 5px;
+`
+
+const DeleteUserButton = styled.button`
+background-image: linear-gradient(-90deg, #0D8E47, #072C13);
+  color: white;
+  font-size: 2.3rem;
+  padding: 7.5px 5px;
+`
+
+const BackgroundColor = styled.div`
+background-color: #0A1B0E;
+height: 900px;
+color: #DBD5C0; 
 `
 
 const PikminsContainerStyle = styled.div`
@@ -28,14 +48,7 @@ class UserPage extends Component {
     user: {},
     pikmins: []
   }
-  //or this one?  
-  // state = {
-  //   user: {
-  //     pikmins: []
-  //   }
-
-  // }
-
+ 
 
   componentDidMount() {
     this.getAllPikmins()
@@ -80,10 +93,11 @@ class UserPage extends Component {
   render() {
     console.log('pikmins', this.state.pikmins)
     return (
+      <BackgroundColor>
       <div>
         <NavBar />
-        <button><Link to={`/users/${this.props.match.params.id}/edit`}>Edit Account</Link></button>
-        <button onClick={this.onDelete.bind(this)}>Delete Account</button>
+        <EditUserButton><Link to={`/users/${this.props.match.params.id}/edit`}>Edit Account</Link></EditUserButton>
+        <DeleteUserButton onClick={this.onDelete.bind(this)}>Delete Account</DeleteUserButton>
 
 
 
@@ -99,6 +113,7 @@ class UserPage extends Component {
           ))}
         </PikminsContainerStyle>
       </div>
+      </BackgroundColor>
     )
   }
 }
