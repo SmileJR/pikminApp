@@ -2,6 +2,14 @@ import React, { Component } from "react";
 import axios from "axios";
 import { Link } from 'react-router-dom'
 import NavBar from './NavBar'
+import styled from 'styled-components'
+
+const BackgroundColor = styled.div`
+background-color: #0A1B0E;
+height: 900px;
+color: #DBD5C0;    
+
+`
 
 // TODO: SHOW ALL USERS
 // TODO: CREATE FORM TO CREATE USER
@@ -48,9 +56,11 @@ class SignUp extends Component {
 
   render() {
     return (
+      <BackgroundColor>
       <div>
         
       <NavBar />
+      <h1>Previous Users Login Here:</h1>
         {this.state.users.map((user) => (
           <div key={user._id}>
             <Link to={`/users/${user._id}`}>{user.username}</Link>
@@ -58,7 +68,7 @@ class SignUp extends Component {
         ))}
 
         <h3>Sign Up: </h3>
-
+{/* //once the submit button is clicked the information will be submitted */}
         <form onSubmit={this.handleSubmit}>
           <div>
             <label htmlFor="username">User Name: </label>
@@ -81,6 +91,7 @@ class SignUp extends Component {
           <button type="submit">Create User</button>
         </form>
       </div>
+      </BackgroundColor>
     );
   }
 }

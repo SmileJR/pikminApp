@@ -58,11 +58,11 @@ class NewPikmin extends Component {
       <div>
 
         <NavBar />
-        {this.state.pikmins.map((pikmin) => (
+        {/* {this.state.pikmins.map((pikmin) => (
           <div key={pikmin._id}>
             <Link to={`/pikmins/${pikmin._id}`}>{pikmin.pikminName}</Link>
           </div>
-        ))}
+        ))} */}
 
         <h3>Create A New Pikmin! </h3>
         <form onSubmit={this.handleSubmit}>
