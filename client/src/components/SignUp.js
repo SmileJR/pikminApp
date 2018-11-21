@@ -67,7 +67,7 @@ class SignUp extends Component {
           </div>
         ))}
 
-        <h3>Sign Up: </h3>
+        <h1>Don't have a Pikmin Keeper Account? Sign Up for one Here: </h1>
 {/* //once the submit button is clicked the information will be submitted */}
         <form onSubmit={this.handleSubmit}>
           <div>

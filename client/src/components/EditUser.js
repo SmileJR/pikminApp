@@ -1,5 +1,19 @@
 import React, { Component } from 'react';
 import axios from "axios";
+import styled from 'styled-components'
+import NavBar from './NavBar'
+
+const BackgroundColor = styled.div`
+background-color: #0A1B0E;
+height: 900px;
+color: #DBD5C0;    
+
+`
+
+
+
+
+
 class EditUser extends Component {
     state = {
         users: [],
@@ -40,9 +54,10 @@ class EditUser extends Component {
       };
     render() {
         return (
-            
+            <BackgroundColor>
             <div>
-                <h1>Edit Your Profile Login</h1>
+            <NavBar />
+                <h1>Edit Your Profile</h1>
                 <form onSubmit={this.handleSubmit}>
           <div>
             <label htmlFor="username">User Name: </label>
@@ -66,6 +81,7 @@ class EditUser extends Component {
           <button type="submit">Edit User</button>
         </form>
             </div>
+            </BackgroundColor>
         );
     }
 }
