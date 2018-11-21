@@ -131,7 +131,7 @@ class NewPikmin extends Component {
             />
           </div>
 
-          <Button type="submit" color="primary">primary</Button>
+          <Button type="submit" color="primary">Create New Pikmin</Button>
     
         
         </form>

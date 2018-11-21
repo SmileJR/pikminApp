@@ -4,36 +4,6 @@ import axios from 'axios'
 import { Card, CardImg, CardText, CardBody,
   CardTitle, CardSubtitle} from 'reactstrap';
 
-
-const PikminStyles = styled.div`
-  display: flex;
-  position: relative;
-  flex-direction: column;
-  width: 200px;
-  height: 200px;
-  background: #f1faee;
-  margin: 10px 0;
-  button {
-    position: absolute;
-    top: 5px;
-    right: 10px;
-  }
-
-  input,
-  textarea {
-    background-color: transparent;
-    border: none;
-  }
-
-  input {
-    height: 30%;
-    font-size: 1.3rem;
-  }
-  textarea {
-    height: 70%;
-  }
-`
-
 class Pikmin extends Component {
   state = {
     pikminId: '',
@@ -89,11 +59,11 @@ class Pikmin extends Component {
         </CardBody>
       </Card>
     
-      <PikminStyles>
+      
         
         <button onClick={this.handleDelete}>Delete this Pikmin</button>
         
-      </PikminStyles>
+      
       </div>
     )
   }
