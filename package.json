@@ -11,15 +11,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/SmileJR/pokemonApp.git"
+    "url": "git+https://github.com/SmileJR/pikminApp.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/SmileJR/pokemonApp/issues"
+    "url": "https://github.com/SmileJR/pikminApp/issues"
   },
-  "homepage": "https://github.com/SmileJR/pokemonApp#readme",
+  "homepage": "https://github.com/SmileJR/pikminApp#readme",
   "dependencies": {
     "axios": "^0.18.0",
     "bootstrap": "^4.1.3",
